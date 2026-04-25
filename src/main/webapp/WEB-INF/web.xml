@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0"
+         metadata-complete="true">
+
+    <display-name>Indian Banking Management System</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- EXPLICIT SERVLET DECLARATIONS (Bulletproof) -->
+    <!-- ═══════════════════════════════════════════ -->
+
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.bankmanage.controller.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.bankmanage.controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminApplicationServlet</servlet-name>
+        <servlet-class>com.bankmanage.controller.AdminApplicationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminApplicationServlet</servlet-name>
+        <url-pattern>/AdminApplicationServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TransferServlet</servlet-name>
+        <servlet-class>com.bankmanage.controller.TransferServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TransferServlet</servlet-name>
+        <url-pattern>/TransferServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.bankmanage.controller.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CustomerActionServlet</servlet-name>
+        <servlet-class>com.bankmanage.controller.CustomerActionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerActionServlet</servlet-name>
+        <url-pattern>/CustomerActionServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminActionServlet</servlet-name>
+        <servlet-class>com.bankmanage.controller.AdminActionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminActionServlet</servlet-name>
+        <url-pattern>/AdminActionServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- ERROR PAGES                                 -->
+    <!-- ═══════════════════════════════════════════ -->
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- SESSION SECURITY                            -->
+    <!-- ═══════════════════════════════════════════ -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+        <cookie-config>
+            <http-only>true</http-only>
+        </cookie-config>
+        <tracking-mode>COOKIE</tracking-mode>
+    </session-config>
+
+</web-app>

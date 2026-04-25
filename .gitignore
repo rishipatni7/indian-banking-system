@@ -1,0 +1,19 @@
+# Compiled class file
+*.class
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+
+# Build directory
+build/
+
+# IDE directories
+.idea/
+*.iml
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
