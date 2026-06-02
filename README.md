@@ -102,7 +102,7 @@ mysql -u root -p < sql/schema.sql
 ### 💻 Local Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/rishi-patni/indian-banking-system.git
+   git clone https://github.com/rishipatni7/indian-banking-system.git
    ```
 2. Import the project into your Java EE IDE as a Dynamic Web Project.
 3. Configure the database credentials in [DBConnectionManager.java](file:///c:/Users/Rishi/eclipse-workspace/BankManage/src/main/java/com/bankmanage/util/DBConnectionManager.java).
